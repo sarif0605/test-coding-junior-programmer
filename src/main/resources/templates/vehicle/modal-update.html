@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="editModal">
+      <div
+        class="modal fade"
+        id="edit"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="editLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fw-bold" id="editLabel">
+                Edit Data Kendaraan
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="edit-form">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label
+                      for="edit-registrationNumber"
+                      class="form-label fw-bold"
+                      >No Registrasi Kendaraan</label
+                    >
+                    <input
+                      type="text"
+                      id="edit-registrationNumber"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="edit-ownerName" class="form-label fw-bold"
+                      >Nama Pemilik Kendaraan</label
+                    >
+                    <input
+                      type="text"
+                      id="edit-ownerName"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="edit-color" class="form-label fw-bold"
+                      >Warna Kendaraan</label
+                    >
+                    <select id="edit-color" class="form-select">
+                      <option value="Merah">Merah</option>
+                      <option value="Hitam">Hitam</option>
+                      <option value="Biru">Biru</option>
+                      <option value="Abu-Abu">Abu-Abu</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="edit-brand" class="form-label fw-bold"
+                      >Merek Kendaraan</label
+                    >
+                    <input type="text" id="edit-brand" class="form-control" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label
+                      for="edit-manufacturingYear"
+                      class="form-label fw-bold"
+                      >Tahun Pembuatan</label
+                    >
+                    <input
+                      type="number"
+                      id="edit-manufacturingYear"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label
+                      for="edit-cylinderCapacity"
+                      class="form-label fw-bold"
+                      >Kapasitas Silinder</label
+                    >
+                    <input
+                      type="number"
+                      id="edit-cylinderCapacity"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="edit-address" class="form-label fw-bold"
+                      >Alamat Pemilik Kendaraan</label
+                    >
+                    <textarea
+                      id="edit-address"
+                      class="form-control"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="edit-fuelType" class="form-label fw-bold"
+                      >Bahan Bakar</label
+                    >
+                    <input
+                      type="text"
+                      id="edit-fuelType"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                <i class="fa-solid fa-rotate-left"></i>Kembali
+              </button>
+              <button class="btn btn-success" onclick="updateVehicle()">
+                <i class="fa-solid fa-pen"></i>Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

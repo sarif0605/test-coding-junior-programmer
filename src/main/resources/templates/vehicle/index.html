@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layouts/main}"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <title>Vehicle</title>
+  </head>
+
+  <body>
+    <!-- Content -->
+    <section class="mx-3" layout:fragment="content">
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <h1 class="fw-bold text-center mt-3">Aplikasi Data Kendaraan</h1>
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#create"
+        >
+          <i class="fa-solid fa-circle-plus"></i> Add
+        </button>
+      </div>
+
+      <!-- Table -->
+      <table
+        id="vehicle-table"
+        class="table mt-3 table-striped table-hover text-center table-bordered"
+      >
+        <thead class="table-dark">
+          <tr>
+            <th>No</th>
+            <th>No Registrasi</th>
+            <th>Nama Pemilik</th>
+            <th>Merk Kendaraan</th>
+            <th>Tahun Pembuatan</th>
+            <th>Kapasitas</th>
+            <th>Warna</th>
+            <th>Bahan Bakar</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+      </table>
+
+      <!-- Include modals -->
+      <div th:replace="~{vehicle/modal-detail :: detailModal}"></div>
+      <div th:replace="~{vehicle/modal-create :: createModal}"></div>
+      <div th:replace="~{vehicle/modal-update :: editModal}"></div>
+    </section>
+
+    <!-- JS Local -->
+    <div layout:fragment="script">
+      <script th:src="@{/js/vehicle.js}"></script>
+    </div>
+  </body>
+</html>

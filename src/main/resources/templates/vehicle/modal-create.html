@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:fragment="createModal">
+      <div
+        class="modal fade"
+        id="create"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="createLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fw-bold" id="createLabel">
+                Tambah Data Kendaraan
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label
+                    for="create-registrationNumber"
+                    class="form-label fw-bold"
+                    >No Registrasi Kendaraan</label
+                  >
+                  <input
+                    type="text"
+                    id="create-registrationNumber"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="create-ownerName" class="form-label fw-bold"
+                    >Nama Pemilik</label
+                  >
+                  <input
+                    type="text"
+                    id="create-ownerName"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="create-color" class="form-label fw-bold"
+                    >Warna Kendaraan</label
+                  >
+                  <select id="create-color" class="form-control" required>
+                    <option value="" disabled selected>Select Color</option>
+                    <option value="Merah">Merah</option>
+                    <option value="Hitam">Hitam</option>
+                    <option value="Biru">Biru</option>
+                    <option value="Abu-Abu">Abu-Abu</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="create-brand" class="form-label fw-bold"
+                    >Merek Kendaraan</label
+                  >
+                  <input
+                    type="text"
+                    id="create-brand"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label
+                    for="create-manufacturingYear"
+                    class="form-label fw-bold"
+                    >Tahun Pembuatan</label
+                  >
+                  <input
+                    type="number"
+                    id="create-manufacturingYear"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label
+                    for="create-cylinderCapacity"
+                    class="form-label fw-bold"
+                    >Kapasitas Silinder</label
+                  >
+                  <input
+                    type="number"
+                    id="create-cylinderCapacity"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="create-address" class="form-label fw-bold">
+                    Alamat Pemilik Kendaraan
+                  </label>
+                  <textarea
+                    id="create-address"
+                    class="form-control"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="create-fuelType" class="form-label fw-bold"
+                    >Bahan Bakar</label
+                  >
+                  <input
+                    type="text"
+                    id="create-fuelType"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                <i class="fa-solid fa-rotate-left"></i>Kembali
+              </button>
+              <button class="btn btn-success" onclick="createVehicle()">
+                <i class="fa-solid fa-plus"></i>Tambah
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
